@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>세미 프로젝트 - login</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/base.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <style>
+        .container { margin-top: 90px;}
+        .form-group { margin: 20px;}
+        .form-group:last-child { margin-left: 40px;}
+    </style>
+</head>
+<body>
+    <div id="container">
+    <header>
+        <h1>세미 프로젝트 v1</h1></header>
+        <nav>
+            <ul class="list-inline row text-center justify-content-evenly mt-5">
+                <li class="col-2"><a href="/">Home</a></li>
+                <li class="col-2"><a href="/join">회원가입</a></li>
+                <li class="col-2"><a href="/login">로그인</a></li>
+                <li class="col-2"><a href="/board/list">게시판</a></li>
+                <li class="col-2"><a href="/myinfo">회원정보</a></li>
+            </ul>
+            <hr>
+        </nav>
+        <main>
+            <div><h2>로그인</h2></div>
+            <div class="container d-flex justify-content-center">
+                <form class="m-auto">
+                    <div class="form-group row">
+                        <label for="idInput" class="col-sm-4 col-form-label text-right">아이디</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="idInput">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="passwordInput" class="col-sm-4 col-form-label text-right">비밀번호</label>
+                        <div class="col-sm-8">
+                            <input type="password" class="form-control" id="passwordInput">
+                        </div>
+                    </div>
+                    <div class="form-group row justify-content-center mt-3">
+                        <div class="col-5">
+                            <button type="button" class="btn btn-primary"><i class="bi bi-door-open"></i> 로그인</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+    <footer>
+        <hr>
+        <div>copyright &copy; 2014.2017. popop. All Rights Reserved.</div>
+    </footer>
+    </div>
+</body>
+</html>
