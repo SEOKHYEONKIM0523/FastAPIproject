@@ -1,15 +1,18 @@
 {% extends 'base.html' %}
-
+{% block style %}
+<style>
+</style>
+{% endblock%}
 {% block main %}
 <main>
     <h2>회원정보</h2>
-    <div class="container d-flex justify-content-center">
-    <table class="table table-bordered">
-        <tr><td>아이디</td><td>abc123</td></tr>
-        <tr><td>이름</td><td>987xyz</td></tr>
-        <tr><td>이메일</td><td>abc123@987xyz.co.kr</td></tr>
-        <tr><td>가입일</td><td>2024.01.22 12:23:34</td></tr>
-    </table>
+    <div class="container w-20 mt-5">
+        <table class="table table-bordered">
+            <tr><td>아이디</td><td>abc123</td></tr>
+            <tr><td>이름</td><td>987xyz</td></tr>
+            <tr><td>이메일</td><td>abc123@987xyz.co.kr</td></tr>
+            <tr><td>가입일</td><td>2024.01.22 12:23:34</td></tr>
+        </table>
     </div>
 </main>
 {% endblock %}
