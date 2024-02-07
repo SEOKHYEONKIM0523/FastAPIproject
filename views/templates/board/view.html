@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block style %}
+<style>
+    #view div { margin-bottom: 5px;}
+    #view label {width: 110px; text-align: right; font-weight: bold; margin-right: 15%;}
+    #cnts { display: inline-block; width: 460px; height: 450px ; margin-left: 100px; margin-top:-20px}
+    .dragup { vertical-align: top}
+
+    #view div:last-child { text-align: right; margin-right: 1px}
+
+
+</style>
+{% endblock%}
+{% block main %}
+<main>
+    <h2>게시판 본문보기</h2>
+    <div id="view" class="w-50 container">
+        <div class="row">
+            <div class="col-auto"><label>제 목</label></div>
+            <div class="col-auto"><span id="fi">시간은 금이라구, 친구! 진짜라구, 친구!</span></div>
+        </div>
+        <div class="row">
+            <div class="col-auto"><label>작성자</label></div>
+            <div class="col-auto"><span>abc123</span></div>
+        </div>
+        <div class="row">
+            <div class="col-auto"><label>작성일</label></div>
+            <div class="col-auto"> <span>2024-01-22 12:23:34 (987)</span></div>
+        </div>
+        <div class="row">
+            <div class="col-auto"><div class="dragup"><label>본 문</label></div></div>
+            <div class="col-auto"> <span id="cnts" >시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구,
+                    친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구,
+                    친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구, 친구!시간은 금이라구, 친구! 진짜라구,
+                    친구!!</span></div></div>
+        <button type="button" class="btn btn-success"><i class="bi bi-list"></i>목록으로</button>
+        <button type="button" class="btn btn-warning"><i class="bi bi-pencil-square"></i>수정하기</button>
+        <button type="button" class="btn btn-danger"><i class="bi bi-x-circle"></i>삭제하기</button>
+
+    </div>
+</main>
+{% endblock %}
