@@ -1,7 +1,6 @@
 from app.models.board import Board
 from app.dbfactory import Session
-from sqlalchemy import insert
-from sqlalchemy import select
+from sqlalchemy import insert, select, update
 
 
 
@@ -39,5 +38,13 @@ class BoardService():
         with Session() as sess:
             stmt = select(Board).filter_by(bno=bno)
             result = sess.execute(stmt).first()
+            return result
+
+    @staticmethod
+    def update_count_board(bno):
+        with Session() as sess:
+            stmt = update(Board).filter_by(bno=bno).values(views=Board.views+1)
+            result = sess.execute(stmt)
+            sess.commit()
 
         return result
