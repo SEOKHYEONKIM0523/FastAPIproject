@@ -33,7 +33,7 @@
             <td colspan="3"><a href="/board/write" class="btn btn-dark text-white">글쓰기</a></td></tr>
         <tr><th>번호</th><th>제목</th><th>작성자</th><th>작성일</th><th>조회</th></tr>
         {% for bd in bdlist  %}
-        <tr><td>{{ bd.bno }}</td><td><a href="/board/view">{{bd.title}}</a></td>
+        <tr><td>{{ bd.bno }}</td><td><a href="/board/view/{{bd.bno}}">{{bd.title}}</a></td>
             <td>{{bd.userid}}</td>
             <td>{{bd.regdate.strftime('%Y-%m-%d')}}</td>
             <td>{{bd.views}}</td></tr>
