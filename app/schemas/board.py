@@ -17,3 +17,4 @@ class NewBoard(BaseModel):
     title: str
     userid: str
     contents: str
+    response: str

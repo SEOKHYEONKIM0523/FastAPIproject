@@ -60,9 +60,12 @@ def write(req: Request):
 
 @board_router.post('/write')
 def writeok(bdto: NewBoard):
-    result = BoardService.insert_board(bdto)
-    res_url = '/error'
-    if result.rowcount > 0: res_url = '/board/list/1'
+    res_url = '/captcha_error'
+    if BoardService.check_captcha(bdto): #captcha 체크가 true라면
+        result = BoardService.insert_board(bdto)
+        res_url = '/error'
+        if result.rowcount > 0: res_url = '/board/list/1'
+
     return RedirectResponse(res_url, status_code=status.HTTP_302_FOUND)
 
 
