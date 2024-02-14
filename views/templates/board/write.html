@@ -9,16 +9,16 @@
     button:first-child {  display: inline-block; margin-left: 135px }
     .dragup {vertical-align: top}
 </style>
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-        async defer>
-</script>
-<script type="text/javascript">
-    var onloadCallback = () => {
-        grecaptcha.render('captcha', {
-            'sitekey' : ''
-        });
-    };
-</script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+            async defer>
+    </script>
+    <script type="text/javascript">
+        var onloadCallback = () => {
+            grecaptcha.render('captcha', {
+                'sitekey' : ''
+            });
+        };
+    </script>
 {% endblock%}
 {% block main %}
 <main>
@@ -46,7 +46,7 @@
                 <button type="reset" class="btn btn-danger">다시입력</button></div>
         </div>
 
-
+        </div>
     </form>
 </main>
 
