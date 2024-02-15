@@ -8,7 +8,6 @@
 
     td:nth-child(2) { text-align:left ; white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
     .pagination a:link { color: #6f42c1}
-    .btn { m}
 </style>
 {% endblock%}
 {% block main %}
@@ -30,16 +29,16 @@
     </table>
 
     <div class="row justify-content-center">
-        {% for idx in range(1,25) %}
+        {% for gal in galist %}
         <div class="col-10 card m-1" style="width: 18rem">
-            <img src="http://localhost/cdn/bird.jpg"
+            <img src="http://localhost/cdn/{{ gal.fname }}"
                 class="card-img-top" alt="..."> <!-- 이미지 -->
             <div class="card-body">
-                <h5 class="card-title">갤러리 제목</h5>
-                <div><span>작성자</span>
-                    <span>2024-02-15</span></div>
+                <h5 class="card-title">{{ gal.title }}</h5>
+                <div><span>{{ gal.userid }}</span>
+                    <span>{{ gal.regdate }}</span></div>
                 <div>
-                    <span><i class="bi bi-eye"></i>1234</span>
+                    <span><i class="bi bi-eye"></i>{{ gal.views }}</span>
                 </div>
             </div>
         </div>
