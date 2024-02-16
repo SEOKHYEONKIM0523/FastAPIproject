@@ -46,6 +46,12 @@ def login(req: Request, userid: str = Form(), passwd: str = Form()):
         return RedirectResponse(url='/login', status_code=status.HTTP_303_SEE_OTHER)
 
 
+@member_router.get('/logout')
+def logout(req: Request):
+    req.session.clear() # 생성된 세션 객체 제거
+    return RedirectResponse(url='/', status_code=status.HTTP_303_SEE_OTHER)
+
+
 
 @member_router.get('/myinfo', response_class=HTMLResponse)
 def myinfo(req: Request):
