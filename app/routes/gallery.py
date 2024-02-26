@@ -11,7 +11,7 @@ from app.services.gallery import GalleryService
 gallery_router = APIRouter()
 
 templates = Jinja2Templates(directory='views/templates')
-gallery_router.mount('/static',StaticFiles(directory='views/static'),name='static')
+#gallery_router.mount('/static',StaticFiles(directory='views/static'),name='static')
 
 @gallery_router.get('/list/{cpg}', response_class=HTMLResponse)
 def list(req: Request, cpg: int):

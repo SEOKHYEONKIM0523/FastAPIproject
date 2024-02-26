@@ -6,7 +6,8 @@ from app.models import board
 
 
 # sqlite 사용시 check_same_thread 를 추가 - 스레드 사용 안함
-engine = create_engine(config.db_conn , echo=True, connect_args={'check_same_thread':False})
+engine = create_engine(config.db_conn , echo=True)
+                       # , connect_args={'check_same_thread':False})
 Session = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 

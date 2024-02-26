@@ -15,7 +15,7 @@
     <script type="text/javascript">
         var onloadCallback = () => {
             grecaptcha.render('captcha', {
-                'sitekey' : ''
+                'sitekey' : '6LcQ1HApAAAAAA6z0YvkLz8vTit0NnEBU0p9hrAg'
             });
         };
     </script>
@@ -30,7 +30,7 @@
         </div>
         <div class="row">
             <div class="col-auto"><label for="userid" class="col-form-label">작성자</label></div>
-            <div class="col-auto"><input type="text" name="userid" id="userid" value="abc123" class="form-control" readonly></div>
+            <div class="col-auto"><input type="text" name="userid" id="userid" value="{{ request.session['m'] }}" class="form-control" readonly></div>
         </div>
         <div class="row">
             <div class="col-auto"><label for="contents" class="col-form-label">본문</label></div>
@@ -77,7 +77,7 @@
         // 캡챠 응답토큰을 jsondata에 추가
         jsondata['response'] = grecaptcha.getResponse();
 
-        fetch('http://127.0.0.1:8000/board/write', {
+        fetch('/board/write', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
